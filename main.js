@@ -12,33 +12,32 @@ $(document).ready(function(){
 	$(".animation-bar").css("width", "100%");
 	$(".placeholder").css("bottom", "12px");
 	$(".note-p").css({"bottom": "-24px", "color": "white"});
-	$("input").on({
-		keypress: function(){
+	$(".input-main").on({
+		focus: function(){
 			$(".placeholder").css("top", "-25px");
 		},
 		blur: function(){
 			var op = $("input").val();
 			if ( op == "" ) {
-				$(".placeholder").css("top", "8px");
+				$(".placeholder").css("top", "7px");
 			}
 		}
 	});
-	$(".search-btn").on({
-		mouseenter: function(){
-			setTimeout(function(){
-				$(".btn-animate-2").addClass("animateme-2")
-			}, 500)
-			setTimeout(function(){
-				$(".btn-animate-1").addClass("animateme-1")
-			}, 500)
-			setTimeout(function(){
-				$(".search-btn").addClass("box-shadow-animate")
-			}, 500)
-		},
-		mouseleave: function(){
-			$(".btn-animate-2").removeClass("animateme-2");
-			$(".btn-animate-1").removeClass("animateme-1");
-			$(".search-btn").removeClass("box-shadow-animate");
+	setTimeout(function(){
+		$(".btn-animate-2").css('height', '50px');
+		$(".btn-animate-1").css('width', '50px');
+		$(".search-btn").addClass("box-shadow-animate");
+	}, 500)
+
+	// Accardion-Phone
+
+	$(".hints").click(function(){
+		$(".mobile-menu").toggleClass("active");
+	});
+	$(window).resize(function(){
+		var widthm = $(window).width();
+		if( (widthm + 17) > 520) {
+			$(".mobile-menu").removeClass("active");
 		}
 	});
 

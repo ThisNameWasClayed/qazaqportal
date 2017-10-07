@@ -183,7 +183,6 @@ function showDivs(newSlide) {
 // Accardion
 
 var acc = document.getElementsByClassName("accardion-btn");
-var btn = document.getElementsByClassName("pred-accardion-btn");
 var i;
 for (i = 0; i < acc.length; i++) {
 	acc[i].onclick = function() {
