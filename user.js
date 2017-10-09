@@ -125,11 +125,25 @@ $(document).ready(function(){
 	});
 
 	// Parallax
-
-	$(window).bind("scroll", function(){
-		var scrolled = $(window).scrollTop();
-		$(".parallax").css("top", (60 - (scrolled * .1)) + "%");
-	});
+		$(window).bind("scroll", function(){
+			var width = $(this).width();
+			if ($(".phone").hasClass("showPhone") && (width + 17) > 450) {
+				var scrolled = $(window).scrollTop();
+				$(".parallax").css("top", (50 - (scrolled * -.1)) + "%");
+			}
+			if (!$(".phone").hasClass("showPhone") && (width + 17) > 450) {
+				var scrolled = $(window).scrollTop();
+				$(".parallax").css("top", (50 - (scrolled * -.6)) + "%");
+			}
+			else if($(".phone").hasClass("showPhone")) {
+				var scrolled = $(window).scrollTop();
+				$(".parallax").css("top", (50 - (scrolled * -.05)) + "%");
+			}
+			else {
+				var scrolled = $(window).scrollTop();
+				$(".parallax").css("top", (50 - (scrolled * -.55)) + "%");
+			}
+		});
 
 	// More-btn
 

@@ -882,7 +882,7 @@ form.borderBottom div:hover:before, form.borderBottom div:hover:after
 .pred-more-accardion-dropdown {
     overflow: hidden;
 	max-height: 0;
-	padding: 0 5%;
+	padding: 0 8%;
 
 	-webkit-transition: .3s all;
 	-moz-transition: .3s all;
@@ -890,13 +890,19 @@ form.borderBottom div:hover:before, form.borderBottom div:hover:after
 	-o-transition: .3s all;
 	transition: .3s all;
 }.pred-more-accardion-dropdown a {
-	padding: 1% 5%;
 	font-weight: bold;
 	width: 100%;
 	color: #444;
 }.pred-more-accardion-dropdown a:hover {
 	color: #f9bf3b;
+}.pred-more-accardion-dropdown a:first-child {
+	color: #f9bf3b;
+}.pred-more-accardion-dropdown a:hover {
+	color: #f9bf3b;
+}.pred-more-accardion-dropdown > hr {
+	margin: 5px 0;
 }
+
 
 .accardionShow {
 	height: 300px;
@@ -1130,7 +1136,7 @@ div.borderXwidth button:hover:before, div.borderXwidth button:hover:after {
 	box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }.parallax {
 	position: absolute;
-	top: 60%;
+	top: 50%;
 	left: 50%;
 	width: 101%;
 
@@ -1694,15 +1700,18 @@ div.pic img {
 .socicons {
 	position: absolute;
 	right: 0;
+	font-size: 0;
 }
 
 .socicons span {
 	color: white;
+	font-size: 16px;
 }
 
 .socicons a {
-	margin-left: 4px;
+	margin-left: 10px;
 	color: white;
+	font-size: 16px;
 
 	-webkit-transition: .3s color;
 	-moz-transition: .3s color;
@@ -1729,6 +1738,13 @@ div.pic img {
 		position: relative;
 		text-align: center;
 		margin-top: 3px;
+	}
+	.socicons a {
+		font-size: 20px;
+		margin: 0 5px;
+	}
+	.socicons span {
+		display: none;
 	}
 }
 
